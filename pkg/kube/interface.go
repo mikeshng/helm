@@ -34,6 +34,8 @@ type Interface interface {
 
 	WaitWithJobs(resources ResourceList, timeout time.Duration) error
 
+	WaitForDelete(resources ResourceList, timeout time.Duration) error
+
 	// Delete destroys one or more resources.
 	Delete(resources ResourceList) (*Result, []error)
 
